@@ -16,7 +16,7 @@ migratedown:
 sqlc:
     /opt/homebrew/bin/sqlc generate
 
-simple:
-    echo "Hello, this is a simple Makefile"
+test:
+	go test -v -cover ./...
 
-.PHONY: postgres createdb dropdb migrateup migratedown sqlc
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc test
